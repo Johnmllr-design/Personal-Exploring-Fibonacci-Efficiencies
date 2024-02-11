@@ -1,5 +1,4 @@
 
-import timeit
 # this is a program written to demonstrate how dynamic programming can optimize the efficiency of our
 # algorithms via reducing or eliminating repetitive recursive calls via caching local return values of the recursive
 # stack
