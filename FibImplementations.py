@@ -61,6 +61,9 @@ class FibImplementations(object):
 
     # iterativeFibCalculator uses the same idea as MemoizeFibKernel, but, instead, it uses iteration instead
     # of recursion to build its optimization array.
+    # complexity: we do the while loop n times to build the data enough to compute the values from n - 1 and
+    # and n - 2, to then perform the final recursive call and find fibonacci value at n. The operations performed within
+    # the operation are O(1), resulting in an O(n) function
     def iterativeFibCalc(self, index):
         """
         :type index: int
