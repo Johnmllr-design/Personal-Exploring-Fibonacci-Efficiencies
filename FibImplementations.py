@@ -39,9 +39,9 @@ class FibImplementations(object):
         optimizationArray = [0]*(index + 2)
         optimizationArray[0] = 0  # base case
         optimizationArray[1] = 1  # base case
-        return self.MemoizeFibKerner(index, optimizationArray)
+        return self.MemoizeFibKernel(index, optimizationArray)
 
-    def MemoizeFibKerner(self, index, optimizationArr):
+    def MemoizeFibKernel(self, index, optimizationArr):
         """
         :type index: int
         :type optimizationArr: List[int]
@@ -53,8 +53,8 @@ class FibImplementations(object):
         # else, recurse on the two lesser indices than our index variable and cache the value into our memoize array. This branch will only execute at
         # most n times, as the values will be stored in our optimization array.
         else:
-            cachedValue = self.MemoizeFibKerner(
-                index - 1, optimizationArr) + self.MemoizeFibKerner(index - 2, optimizationArr)
+            cachedValue = self.MemoizeFibKernel(
+                index - 1, optimizationArr) + self.MemoizeFibKernel(index - 2, optimizationArr)
             optimizationArr[index] = cachedValue
             return cachedValue
 
